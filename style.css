@@ -1,0 +1,194 @@
+body {
+    background-color: #311b92;
+    margin: 0;
+}
+
+/*==============
+    GARLAND
+==============*/
+
+.lightrope {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+}
+
+.lightrope li {
+    position: relative;
+    width: 12px;
+    height: 28px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 5px 20px 25px;
+
+}
+
+.lightrope li:nth-child(4n+3) {
+    background-color: #00f7a5;
+    box-shadow: 0px 4.66667px 24px 3px #00f7a5;
+
+    animation-name: Light-green;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+}
+
+.lightrope li:nth-child(4n+1) {
+    background-color: #f10094;
+    box-shadow: 0px 4.66667px 24px 3px #f10094;
+
+    animation-name: Light-red;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+}
+
+.lightrope li:nth-child(even) {
+    background-color: #00ffff;
+    box-shadow: 0px 4.66667px 24px 3px #00ffff;
+    animation-name: Light-blue;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Light-green {
+
+    0%,
+    100% {
+        background: #00f7a5;
+        box-shadow: 0px 4.66667px 24px 3px #00f7a5;
+    }
+
+    50% {
+        background: rgba(0, 247, 165, 0.4);
+        box-shadow: 0px 4.66667px 24px 3px rgba(0, 247, 165, 0.2);
+    }
+}
+
+@keyframes Light-red {
+
+    0%,
+    100% {
+        background: #f10094;
+        box-shadow: 0px 4.66667px 24px 3px #f10094;
+    }
+
+    50% {
+        background: #f100955e;
+        box-shadow: 0px 4.66667px 24px 3px #f100955e;
+    }
+}
+
+@keyframes Light-blue {
+
+    0%,
+    100% {
+        background: #00ffff;
+        box-shadow: 0px 4.66667px 24px 3px #00ffff;
+    }
+
+    50% {
+        background: #00ffff52;
+        box-shadow: 0px 4.66667px 24px 3px #00ffff52;
+    }
+}
+
+.lightrope li:first-child {
+    margin-left: -30px;
+}
+
+.lightrope li::before {
+    content: "";
+    position: absolute;
+    background-color: #212121;
+    width: 10px;
+    height: 10px;
+    left: 1px;
+    top: -4px;
+    border-radius: 3px;
+}
+
+.lightrope li::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 18px;
+    border-bottom: 2.5px solid #212121;
+    border-radius: 50%;
+    left: 10px;
+    top: -12px;
+}
+
+/*==================
+    Controll Window
+====================*/
+
+.container {
+    background-color: #1e105e;
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px;
+    border-radius: 4px;
+    margin-top: 50px;
+}
+
+h1 {
+    margin: 0;
+    color: #00ffff;
+}
+
+.control {
+
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.status {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+/*===========
+    BUTTONS
+===========*/
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 4px;
+
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+
+
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.5;
+    text-decoration: none;
+    text-align: center;
+
+    transition: background-color .1s linear;
+}
+
+.btn--red {
+    background-color: #9c2d2d;
+}
+
+.btn--red:hover {
+    background-color: #d82b2b;
+}
+
+.active {
+    background-color: #e84545;
+}
+
